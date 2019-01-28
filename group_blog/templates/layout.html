@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    {% if title %}
+        <title>Small Group Blog - {{ title }}</title>
+    {% else %}
+        <title>Small Group Blog</title>
+    {% endif %}
+
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
