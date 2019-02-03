@@ -3,9 +3,12 @@
 
 This module contain all of the routes for the application.
 """
-from group_blog import app
+
 from flask import render_template, url_for, flash, redirect
-from forms import RegistrationForm, LoginForm
+from group_blog import app
+from group_blog.forms import RegistrationForm, LoginForm
+from group_blog.models import User, Post
+
 
 @app.route("/")
 @app.route("/home")

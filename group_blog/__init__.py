@@ -1,5 +1,5 @@
-import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 # Create app
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Load configuration
 app.config.from_pyfile('config.py')
 
-from views import *
+# Create db
+db = SQLAlchemy(app)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+from group_blog import views

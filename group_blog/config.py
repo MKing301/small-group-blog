@@ -5,3 +5,4 @@ import os
 # import secrets
 # secrets.token_hex(16)
 SECRET_KEY = os.environ.get('SECRET_KEY_LOCAL')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
