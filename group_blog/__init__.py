@@ -15,7 +15,9 @@ db = SQLAlchemy(app)
 # Set up encrpytion
 bcrypt = Bcrypt(app)
 
-# Create login manager
+# Create instance of login manager
 login_manager = LoginManager(app)
+login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
 
 from group_blog import views
