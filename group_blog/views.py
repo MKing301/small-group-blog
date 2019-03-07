@@ -9,7 +9,7 @@ import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request
 from group_blog import app, db, bcrypt
-from group_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm
+from group_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 from group_blog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -90,3 +90,13 @@ def account():
                            title='Account',
                            image_file=image_file,
                            form=form)
+
+
+@app.route("/post/new", methods=['GET', 'POST'])
+@login_required
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        flash('Your post have been created!', 'success')
+        return redirect(url_for('home'))
+    return render_template('create_post.html', title='New Post', form=form)
