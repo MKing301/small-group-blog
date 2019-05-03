@@ -1,3 +1,8 @@
+"""The module module.
+
+This module contain all of the routes for the application.
+"""
+
 from datetime import datetime
 from group_blog import db, login_manager
 from flask_login import UserMixin
