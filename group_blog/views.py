@@ -7,7 +7,7 @@ This module contain all of the routes for the application.
 import os
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, abort
 from group_blog import app, db, bcrypt
 from group_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 from group_blog.models import User, Post
