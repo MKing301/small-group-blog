@@ -58,6 +58,7 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
+    flash('Signed out!', 'success')
     return redirect(url_for('home'))
 
 def save_picture(form_picture):
