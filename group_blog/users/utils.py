@@ -27,5 +27,5 @@ def send_reset_email(user):
 {0}
 
 If you did not make this request, simply ignore this email and no change will be made.
-'''.format({url_for('reset_token', token=token, _external=True)})
+'''.format({url_for('users.reset_token', token=token, _external=True)})
     mail.send(msg)
