@@ -1,4 +1,6 @@
-from group_blog import app
+from group_blog import create_app
+
+app = create_app()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False)
