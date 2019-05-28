@@ -1,6 +1,6 @@
 """The module module.
 
-This module contain all of the routes for the application.
+This module contains the user and posts class of the application.
 """
 
 from datetime import datetime
